@@ -1,0 +1,655 @@
+/*
+----------------------------------------------------
+----------------------------------------------------
+--------------- UNIVERSAL STYLES -------------------
+----------------------------------------------------
+----------------------------------------------------
+*/
+
+@import url("https://fonts.googleapis.com/css2?family=Alata&family=Josefin+Sans:wght@300&display=swap");
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+:root {
+  --alata: "Alata", sans-serif; /* 400 */
+  --josefin-sans: "Josefin Sans", sans-serif; /* 300 */
+  --white: hsl(0, 0%, 100%);
+  --black: hsl(0, 0%, 0%);
+  --dark-gray: hsl(0, 0%, 55%);
+  --very-dark-gray: hsl(0, 0%, 41%);
+  font-size: 15px;
+}
+
+body {
+  width: 100%;
+  overflow-x: hidden;
+}
+
+ul {
+  list-style: none;
+}
+
+/*
+----------------------------------------------------
+----------------------------------------------------
+--------------------- HEADER -----------------------
+----------------------------------------------------
+----------------------------------------------------
+*/
+
+.header {
+  background: url("../images/mobile/image-hero.jpg") no-repeat center;
+  background-size: cover;
+  height: 650px;
+}
+
+.header h1 {
+  font-family: var(--josefin-sans);
+  color: var(--white);
+  font-size: 2.3rem;
+  line-height: 2.53rem;
+  font-weight: 300;
+  text-transform: uppercase;
+  border: 1px solid var(--white);
+  padding: 1.7rem 1.5rem;
+  margin: 9rem 1.6rem;
+}
+
+/* ---- NAV ---- */
+
+.nav-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2.66rem 1.6rem 1rem 1.6rem;
+}
+
+.nav-links {
+  padding: 10.6rem 1.6rem;
+  background: var(--black);
+  color: var(--white);
+  text-transform: uppercase;
+  font-family: var(--josefin-sans);
+  font-size: 1.6rem;
+  line-height: 1.66rem;
+  font-weight: 300;
+  display: none;
+  height: 100vh;
+}
+
+.nav-links li {
+  margin-bottom: 1.5rem;
+}
+
+.show {
+  display: block;
+}
+
+@media screen and (min-width: 375px) {
+  .header h1 {
+    font-size: 2.66rem;
+    padding: 1.73rem 1.6rem;
+  }
+}
+
+@media screen and (min-width: 425px) {
+  .header h1 {
+    font-size: 3.3rem;
+    padding: 2rem 1.73rem;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .header {
+    background: url("../images/desktop/image-hero.jpg") no-repeat center;
+    background-size: cover;
+  }
+
+  .header h1 {
+    margin-right: 20rem;
+  }
+
+  .nav-center {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .mobile-nav {
+    display: none;
+  }
+
+  .nav-links {
+    display: block;
+    background: transparent;
+    font-size: 1rem;
+    font-family: var(--alata);
+    font-weight: 400;
+    text-transform: initial;
+    padding: 0;
+    padding-right: 1.6rem;
+    align-self: flex-end;
+  }
+
+  .links {
+    display: flex;
+    gap: 1.5rem;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .header {
+    padding: 0 8rem;
+  }
+
+  .links li:hover {
+    cursor: pointer;
+    text-decoration: underline 2px var(--white);
+    text-underline-offset: 0.5rem;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .header {
+    padding: 44px 11rem;
+    background-size: 100% auto;
+  }
+
+  .header h1 {
+    font-size: 4.8rem;
+    line-height: 4.66rem;
+    width: 650px;
+    margin-top: 4rem;
+  }
+}
+
+/*
+----------------------------------------------------
+----------------------------------------------------
+---------------------- MAIN ------------------------
+----------------------------------------------------
+----------------------------------------------------
+*/
+
+main {
+  padding: 6.4rem 1.6rem;
+}
+
+.desktop {
+  display: none;
+}
+
+/* --- INTERACTIVE --- */
+
+.interactive-image img {
+  width: 100%;
+  height: auto;
+}
+
+.interactive-content {
+  margin: 3.2rem 0;
+  text-align: center;
+}
+
+.interactive-content h2 {
+  font-family: var(--josefin-sans);
+  font-size: 2.13rem;
+  line-height: 2.13rem;
+  font-weight: 300;
+  text-transform: uppercase;
+}
+
+.interactive-content p {
+  margin-top: 1.066rem;
+  font-family: var(--alata);
+  font-size: 1rem;
+  line-height: 1.66rem;
+  font-weight: 400;
+  color: var(--very-dark-gray);
+}
+
+@media screen and (min-width: 768px) {
+  .interactive-container {
+    display: flex;
+    margin-bottom: 6rem;
+  }
+
+  .interactive-image img {
+    width: 35rem;
+    height: auto;
+  }
+
+  .interactive-content {
+    background-color: var(--white);
+    transform: translate(-150px, 75px);
+    padding: 2rem;
+    margin: 0;
+  }
+
+  .interactive-content h2 {
+    font-size: 1.8rem;
+    width: 15rem;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .mobile {
+    display: none;
+  }
+
+  .desktop {
+    display: block;
+  }
+
+  main {
+    padding: 0 6.5rem;
+  }
+
+  .interactive-container {
+    margin-top: 8rem;
+  }
+
+  .interactive-content {
+    padding: 6rem 0 0 5.5rem;
+    text-align: left;
+  }
+
+  .interactive-content h2 {
+    width: 25rem;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  main {
+    padding: 0 8rem;
+  }
+
+  .interactive-image img {
+    width: 48.73rem;
+    height: 33.33rem;
+  }
+
+  .interactive-content {
+    padding: 6.4rem 0 0 6.33rem;
+    transform: translate(-150px, 150px);
+    height: 25rem;
+  }
+
+  .interactive-content h2 {
+    font-size: 3.2rem;
+    line-height: 3.2rem;
+    width: 30rem;
+  }
+
+  .interactive-content p {
+    font-size: 1rem;
+    line-height: 1.66rem;
+  }
+}
+
+/* --- CREATIONS --- */
+
+.creations-container {
+  text-align: center;
+}
+
+.creations-container h2 {
+  font-family: var(--josefin-sans);
+  font-size: 2.13rem;
+  line-height: 2.13rem;
+  text-transform: uppercase;
+  font-weight: 300;
+}
+
+.creations-gallery {
+  display: grid;
+  margin-top: 3rem;
+  margin-bottom: 1.5rem;
+  gap: 1rem;
+  text-align: left;
+}
+
+.pic {
+  width: 20rem;
+  height: 8rem;
+}
+.pic p {
+  font-size: 1.6rem;
+  color: var(--white);
+  line-height: 1.6rem;
+  font-family: var(--josefin-sans);
+  text-transform: uppercase;
+  padding-top: 3.46rem;
+  padding-left: 1.33rem;
+}
+
+.all {
+  background: transparent;
+  outline: transparent;
+  border: 1px solid var(--very-dark-gray);
+  color: var(--black);
+  padding: 0.7rem 2rem;
+  text-transform: uppercase;
+  font-family: var(--alata);
+  font-size: 0.93rem;
+  line-height: 0.93rem;
+  letter-spacing: 0.33rem;
+}
+
+.deep-earth {
+  background: url("../images/mobile/image-deep-earth.jpg") no-repeat center;
+  background-size: cover;
+  width: 100%;
+  box-shadow: inset 50px 0px 75px 0px #000000;
+}
+
+.night-arcade {
+  background: url("../images/mobile/image-night-arcade.jpg") no-repeat center;
+  background-size: cover;
+  width: 100%;
+  box-shadow: inset 50px 0px 75px 0px #000000;
+}
+
+.soccer-team {
+  background: url("../images/mobile/image-soccer-team.jpg") no-repeat center;
+  background-size: cover;
+  width: 100%;
+  box-shadow: inset 50px 0px 75px 0px #000000;
+}
+
+.grid {
+  background: url("../images/mobile/image-grid.jpg") no-repeat center;
+  background-size: cover;
+  width: 100%;
+  box-shadow: inset 50px 0px 75px 0px #000000;
+}
+
+.up-above {
+  background: url("../images/mobile/image-from-above.jpg") no-repeat center;
+  background-size: cover;
+  width: 100%;
+  box-shadow: inset 50px 0px 75px 0px #000000;
+}
+
+.pocket-brealis {
+  background: url("../images/mobile/image-pocket-borealis.jpg") no-repeat center;
+  background-size: cover;
+  width: 100%;
+  box-shadow: inset 50px 0px 75px 0px #000000;
+}
+
+.curiosity {
+  background: url("../images/mobile/image-curiosity.jpg") no-repeat center;
+  background-size: cover;
+  width: 100%;
+  box-shadow: inset 50px 0px 75px 0px #000000;
+}
+
+.fisheye {
+  background: url("../images/mobile/image-fisheye.jpg") no-repeat center;
+  background-size: cover;
+  width: 100%;
+  box-shadow: inset 50px 0px 75px 0px #000000;
+}
+
+@media screen and (min-width: 375px) {
+  .pic {
+    width: 21.8rem;
+  }
+}
+
+@media screen and (min-width: 425px) {
+  .pic {
+    width: 25rem;
+    height: 9rem;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .creations-container {
+    margin-top: 9rem;
+  }
+
+  .creations-gallery {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+
+  .pic {
+    width: 23rem;
+    height: 9rem;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .creations-gallery {
+    margin-bottom: 8rem;
+  }
+
+  .deep-earth {
+    background: url("../images/desktop/image-deep-earth.jpg") no-repeat center;
+    background-size: cover;
+    width: 100%;
+    box-shadow: inset 50px 0px 75px 0px #000000;
+  }
+
+  .night-arcade {
+    background: url("../images/desktop/image-night-arcade.jpg") no-repeat center;
+    background-size: cover;
+    width: 100%;
+    box-shadow: inset 50px 0px 75px 0px #000000;
+  }
+
+  .soccer-team {
+    background: url("../images/desktop/image-soccer-team.jpg") no-repeat center;
+    background-size: cover;
+    width: 100%;
+    box-shadow: inset 50px 0px 75px 0px #000000;
+  }
+
+  .grid {
+    background: url("../images/desktop/image-grid.jpg") no-repeat center;
+    background-size: cover;
+    width: 100%;
+    box-shadow: inset 50px 0px 75px 0px #000000;
+  }
+
+  .up-above {
+    background: url("../images/desktop/image-from-above.jpg") no-repeat center;
+    background-size: cover;
+    width: 100%;
+    box-shadow: inset 50px 0px 75px 0px #000000;
+  }
+
+  .pocket-brealis {
+    background: url("../images/desktop/image-pocket-borealis.jpg") no-repeat
+      center;
+    background-size: cover;
+    width: 100%;
+    box-shadow: inset 50px 0px 75px 0px #000000;
+  }
+
+  .curiosity {
+    background: url("../images/desktop/image-curiosity.jpg") no-repeat center;
+    background-size: cover;
+    width: 100%;
+    box-shadow: inset 50px 0px 75px 0px #000000;
+  }
+
+  .fisheye {
+    background: url("../images/desktop/image-fisheye.jpg") no-repeat center;
+    background-size: cover;
+    width: 100%;
+    box-shadow: inset 50px 0px 75px 0px #000000;
+  }
+
+  .pic {
+    width: 13rem;
+    height: 25rem;
+  }
+
+  .pic p {
+    padding-left: 2rem;
+    padding-top: 19rem;
+    font-size: 2rem;
+    line-height: 2rem;
+  }
+
+  .creations-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .all:hover {
+    cursor: pointer;
+    background-color: var(--black);
+    color: var(--white);
+  }
+
+  .creations-container h2 {
+    font-size: 2.8rem;
+    line-height: 2.8rem;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .creations-container h2 {
+    font-size: 3.2rem;
+    line-height: 3.2rem;
+  }
+
+  .pic p {
+    font-size: 2.133rem;
+    line-height: 2.133rem;
+  }
+
+  .pic {
+    width: 18.066rem;
+    height: 30rem;
+  }
+
+  .creations-gallery {
+    gap: 2.5rem;
+  }
+}
+
+@media screen and (min-width: 1500px) {
+  .pic {
+    width: 19.3rem;
+    height: 30rem;
+  }
+}
+
+/*
+----------------------------------------------------
+----------------------------------------------------
+---------------------- FOOTER ----------------------
+----------------------------------------------------
+----------------------------------------------------
+*/
+
+.footer {
+  background-color: var(--black);
+  color: var(--white);
+}
+
+.foot-container {
+  padding: 3.73rem 3.46rem;
+  text-align: center;
+}
+
+.foot-nav {
+  margin: 2rem 0;
+}
+
+.foot-links {
+  display: grid;
+  gap: 0.7rem;
+  font-family: var(--alata);
+  font-size: 1rem;
+  line-height: 1.66rem;
+  font-weight: 400;
+}
+
+.media-icons i {
+  color: var(--white);
+  font-size: 1.4rem;
+  margin-bottom: 1rem;
+  margin-left: 0.5rem;
+}
+
+.icons-copyright p {
+  color: var(--dark-gray);
+  font-family: var(--alata);
+  font-size: 1rem;
+  line-height: 1.66rem;
+  font-weight: 400;
+}
+
+@media screen and (min-width: 768px) {
+  .foot-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2.5rem 3.46rem;
+  }
+
+  .foot-links {
+    display: flex;
+    margin-top: 0.5rem;
+  }
+
+  .foot-nav {
+    margin: 0;
+  }
+
+  .logo-links {
+    text-align: left;
+  }
+
+  .icons-copyright {
+    text-align: right;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .foot-container {
+    padding: 2.933rem 7rem;
+  }
+
+  .foot-logo img {
+    width: 9.6rem;
+    height: auto;
+  }
+
+  .media-icons i {
+    font-size: 1.2rem;
+  }
+
+  .media-icons i:hover {
+    cursor: pointer;
+    text-decoration: underline 2px var(--white);
+    text-underline-offset: 0.5rem;
+  }
+
+  .foot-links li:hover {
+    cursor: pointer;
+    text-decoration: underline 2px var(--white);
+    text-underline-offset: 0.5rem;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .foot-container {
+    padding: 2.93rem 9rem;
+  }
+}
